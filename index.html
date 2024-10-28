@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego de Asteroides</title>
+  <title>Asteroid Words Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="gameContainer">
     <div class="sidebar">
       <div class="stats">
-        <p><strong>Palabras correctas:</strong> <span id="correctWords">0</span></p>
-        <p><strong>Palabras incorrectas:</strong> <span id="incorrectWords">0</span></p>
-        <p><strong>Nivel:</strong> <span id="level">1</span></p>
+        <p><strong>Correct Words:</strong> <span id="correctWords">0</span></p>
+        <p><strong>Incorrect Words:</strong> <span id="incorrectWords">0</span></p>
+        <p><strong>Level:</strong> <span id="level">1</span></p>
       </div>
       <div class="lifeContainer">
-        <p>Vida</p>
+        <p>Life</p>
         <div class="lifeBar" id="life"></div>
       </div>
     </div>
     <div class="gameArea">
-      <input type="text" id="wordInput" autofocus placeholder="Escribe aquí">
+      <input type="text" id="wordInput" autofocus placeholder="Type, type," autocomplete="off">
       <div id="game">
-        <div id="spaceship"></div>
+        <img id="spaceship" src="assets/nave.png" alt="Spaceship">
       </div>
     </div>
     <div class="sidebar"></div>
