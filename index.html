@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Asteroides</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gameContainer">
+    <div class="sidebar">
+      <div class="stats">
+        <p><strong>Palabras correctas:</strong> <span id="correctWords">0</span></p>
+        <p><strong>Palabras incorrectas:</strong> <span id="incorrectWords">0</span></p>
+        <p><strong>Nivel:</strong> <span id="level">1</span></p>
+      </div>
+      <div class="lifeContainer">
+        <p>Vida</p>
+        <div class="lifeBar" id="life"></div>
+      </div>
+    </div>
+    <div class="gameArea">
+      <input type="text" id="wordInput" autofocus placeholder="Escribe aquí">
+      <div id="game">
+        <div id="spaceship"></div>
+      </div>
+    </div>
+    <div class="sidebar"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
