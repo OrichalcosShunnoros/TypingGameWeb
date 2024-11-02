@@ -49,6 +49,7 @@ let gamePaused = false;
 let asteroidSpeed = 16;
 let asteroids = [];
 const maxVisibleWords = 5;
+let asteroidInterval = 700;
 
 function createAsteroid() {
     if (asteroids.length >= maxVisibleWords) return;
@@ -63,7 +64,6 @@ function createAsteroid() {
     asteroid.style.left = `${Math.floor(Math.random() * (game.clientWidth - 50))}px`;
     asteroid.style.top = '0px';
     
-
     asteroid.addEventListener('click', () => {
         asteroid.remove();
         asteroids.splice(asteroids.indexOf(asteroid), 1);
@@ -133,7 +133,10 @@ function updateStats() {
     if (correctWords > 0 && correctWords % 50 === 0) {
         level++;
         asteroidSpeed += 8;
+        asteroidInterval = Math.max(200, asteroidInterval - 200); 
         clearAsteroids();
+        clearInterval(asteroidUpdateInterval);
+        asteroidUpdateInterval = setInterval(updateAsteroids, asteroidInterval);
         alert(`¡Felicidades, has alcanzado el nivel: ${level}!`);
     }
 }
@@ -173,5 +176,5 @@ function checkWord(event) {
     }
 }
 
-setInterval(updateAsteroids, 1000);
+let asteroidUpdateInterval = setInterval(updateAsteroids, asteroidInterval);
 wordInput.addEventListener('keydown', checkWord);
