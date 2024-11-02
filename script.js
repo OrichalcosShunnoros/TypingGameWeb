@@ -130,14 +130,14 @@ function updateStats() {
     incorrectWordsEl.textContent = incorrectWords;
     levelEl.textContent = level;
 
-    if (correctWords > 0 && correctWords % 50 === 0) {
+    if (correctWords > 0 && correctWords % 20 === 0) {
         level++;
         asteroidSpeed += 8;
-        asteroidInterval = Math.max(200, asteroidInterval - 200); 
+        asteroidInterval = Math.max(100, asteroidInterval - 100); 
         clearAsteroids();
         clearInterval(asteroidUpdateInterval);
         asteroidUpdateInterval = setInterval(updateAsteroids, asteroidInterval);
-        alert(`¡Felicidades, has alcanzado el nivel: ${level}!`);
+        alert(`Congratulations, you has pass to level: ${level}!`);
     }
 }
 
