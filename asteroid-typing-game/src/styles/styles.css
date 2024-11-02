@@ -1,0 +1,21 @@
+.app {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #282828;
+    padding: 20px;
+}
+
+.gameArea {
+    width: 60%;
+    background-color: #2d2d2d;
+    position: relative;
+}
+
+.highScore {
+    width: 20%;
+    background-color: #282828;
+    padding: 20px;
+}
